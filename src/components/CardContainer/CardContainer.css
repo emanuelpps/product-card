@@ -1,0 +1,15 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.1fr;
+  grid-template-rows: 0.5fr repeat(2, 1fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title-container ."
+    ". product-container ."
+    ". price-button-container .";
+  grid-area: card-container;
+  background-color: #f4f3f3f5;
+  height: 100%;
+  width: 100%;
+  border-radius: 35px;
+}

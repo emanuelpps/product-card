@@ -1,0 +1,4 @@
+.product-container{
+    grid-area: product-container;
+    background-color: #f4f3f3f5;
+}

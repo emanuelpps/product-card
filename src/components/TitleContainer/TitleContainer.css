@@ -1,0 +1,5 @@
+.title-container{
+    grid-area: title-container;
+    background-color: #f4f3f3f5;
+    width: 100%;
+}

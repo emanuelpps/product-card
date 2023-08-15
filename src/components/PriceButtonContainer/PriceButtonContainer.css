@@ -1,0 +1,49 @@
+.price-button-container{
+    grid-area: price-button-container;
+    background-color: #f4f3f3f5;
+}
+
+.price-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.shipping{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.precio-unitario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.precio-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-div{
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    width: 100%;
+    height: 50px;
+}
+
+.button-div button{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    border-radius: 35px;
+    color: aliceblue;
+}
