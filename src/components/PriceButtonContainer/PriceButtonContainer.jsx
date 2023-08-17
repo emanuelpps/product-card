@@ -1,7 +1,11 @@
 import React from "react";
 import "./PriceButtonContainer.css";
 
-export default function PriceButtonContainer() {
+export default function PriceButtonContainer({loadProduct}) {
+
+    const totalPrice = () => {
+
+    }
   return (
     <div className="price-button-container">
       <div className="price-container">
@@ -9,10 +13,10 @@ export default function PriceButtonContainer() {
         <h4>Envio</h4> <span>$100</span>
         </div>
         <div className="precio-unitario">
-        <h3>Precio Unitario</h3> <span>$700</span>
+        <h3>Precio Unitario</h3> <span>${loadProduct.price}</span>
         </div>
         <div className="precio-total">
-        <h3>Precio Total</h3> <span>$800</span>
+        <h3>Precio Total</h3> <span>${loadProduct.price}</span>
         </div>
       </div>
       <div className="button-container">

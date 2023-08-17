@@ -2,3 +2,53 @@
     grid-area: product-container;
     background-color: #f4f3f3f5;
 }
+
+.product-text{
+    width: 50%;
+    font-size: 0.8rem;
+    align-self: center;
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product img{
+    width: 120px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.line-bar{
+    margin-top: 80px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.counter{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.counter input{
+    width: 20px;
+    text-align: center;
+}
+
+.counter button{
+    background-color: #cae7f4;
+    border-radius: 5px;
+    width: 30px;
+    height: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
