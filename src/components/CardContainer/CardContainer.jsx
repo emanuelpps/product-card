@@ -7,25 +7,30 @@ import PriceButtonContainer from "../PriceButtonContainer/PriceButtonContainer";
 export default function CardContainer() {
   const [loadProduct, setLoadProduct] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [randomEndpoint, setRandomEndpoint] = useState('');
 
   const randomProduct = () => {
-    return Math.floor(Math.random() * 21)
-  }
+    setRandomEndpoint(Math.floor(Math.random() * 21)) 
+  };
+
+  console.log(randomEndpoint);
 
   useEffect(() => {
-    const newProduct = [];
-    fetch(`https://fakestoreapi.com/products/${randomProduct()}`)
+    randomProduct();
+    fetch(`https://fakestoreapi.com/products/${randomEndpoint}`)
       .then((res) => res.json())
-      .then((res) => newProduct.push(...res,quantity));
-      setLoadProduct(newProduct)
-      console.log(loadProduct);
+      .then((res) => {
+        const newProduct = { ...res, quantity };
+        setLoadProduct(newProduct);
+        console.log(loadProduct);
+      });
   }, []);
 
   return (
     <div className="card-container">
-      <TitleContainer loadProduct={loadProduct}/>
-      <ProductContainer loadProduct={loadProduct}/>
-      <PriceButtonContainer loadProduct={loadProduct}/>
+      <TitleContainer loadProduct={loadProduct} />
+      <ProductContainer loadProduct={loadProduct} />
+      <PriceButtonContainer loadProduct={loadProduct} />
     </div>
   );
 }
